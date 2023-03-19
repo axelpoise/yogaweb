@@ -1,0 +1,19 @@
+<div class="py-10">
+    <div class="flex flex-row min-w-full justify-between">
+        <div id="logo"><img src="beapreeya.svg" alt="bea preeya"/></div>
+        <button class="inline md:hidden w-10 h-10 text-gray-600 p-1 " onclick="
+            const menu = document.getElementById('burger');
+            menu.classList.toggle('hidden');
+            ">
+            <svg fill="black" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <div class="hidden md:inline-block" hx-get="/language.html" hx-trigger="load"></div>
+    </div>
+
+    <div id="burger" class="md:block hidden" hx-get="/navigation.html" hx-trigger="load">
+    </div>
+</div>

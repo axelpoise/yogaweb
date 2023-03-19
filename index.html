@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bea Preeya Yoga</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, inital-scale-1.0">
+    <script src="https://unpkg.com/htmx.org@1.8.0"
+            integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yoga: {
+                            50: '#f3e8d6',
+                            100: '#998b6e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ["HelveticaNeue-Light", '"Helvetica Neue Light"', '"Helvetica Neue"', 'Helvetica', 'Arial', '"Lucida Grande"']
+                    }
+                }
+            }
+            //plugins: [
+            // plugin(function({ addVariant }) {
+            //	addVariant('htmx-settling', ['&.htmx-settling', '.htmx-settling &'])
+            //	addVariant('htmx-request',  ['&.htmx-request',  '.htmx-request &'])
+            //	addVariant('htmx-swapping', ['&.htmx-swapping', '.htmx-swapping &'])
+            //	addVariant('htmx-added',    ['&.htmx-added',    '.htmx-added &'])
+            //	}),
+            //],
+        }
+    </script>
+    <script>
+        class Translate extends HTMLElement {
+
+            connectedCallback() {
+                this.render()
+                document.body.addEventListener('lang-change', this.render.bind(this))
+            }
+
+            render() {
+                if (!this.attributes.hasOwnProperty(document.documentElement.lang.toLowerCase())) {
+                    this.style.setProperty('display', 'none')
+                } else {
+                    this.style.setProperty('display', 'inline')
+                }
+            }
+        }
+
+        window.customElements.define('t-lang', Translate)
+
+
+    </script>
+    <script>
+        function toggleCSSClass(elementId, cssClass) {
+            const element = document.getElementById(elementId);
+            element.classList.toggle(cssClass);
+        }
+    </script>
+
+</head>
+<body class="bg-yoga-50 text-yoga-100 font-light">
+<div class="flex flex-row">
+    <div class="md:basis-1/4 basis-10"></div>
+    <div class="md:basis-1/2 basis-80  ">
+        <div hx-get="/header.html" hx-trigger="load">header</div>
+        <div id="content">
+            <div hx-get="/main.html" hx-trigger="load">main</div>
+        </div>
+        <div hx-get="/footer.html" hx-trigger="load">footer</div>
+    </div>
+    <div class="md:basis-1/4 basis-10"></div>
+</div>
+</body>
+</html>

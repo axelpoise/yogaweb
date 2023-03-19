@@ -1,0 +1,42 @@
+<div id="language" class="md:m-2 m-b-2 text-yoga-100">
+    <div id="current_language" onclick="
+            toggleCSSClass('select_language', 'hidden');
+            toggleCSSClass('down_arrow', 'hidden')
+            toggleCSSClass('up_arrow', 'hidden')
+            ">
+        <div class="inline-block">
+            <t-lang en>En</t-lang>
+            <t-lang fr>Fr</t-lang>
+
+            <svg id="down_arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor"
+                 class="w-6 h-6 inline-block">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+            <svg id="up_arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor" class="w-6 h-6 inline-block hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+            </svg>
+
+        </div>
+
+    </div>
+    <div id="select_language" class="hidden">
+        <div onclick="
+				document.documentElement.lang = 'en';
+			    document.body.dispatchEvent(new CustomEvent('lang-change'));
+                toggleCSSClass('select_language', 'hidden');
+                toggleCSSClass('down_arrow', 'hidden')
+                toggleCSSClass('up_arrow', 'hidden')
+			     ">En
+        </div>
+        <div onclick="
+				document.documentElement.lang = 'fr';
+			    document.body.dispatchEvent(new CustomEvent('lang-change'));
+                toggleCSSClass('select_language', 'hidden');
+                toggleCSSClass('down_arrow', 'hidden')
+                toggleCSSClass('up_arrow', 'hidden')
+				">Fr
+        </div>
+    </div>
+</div>
