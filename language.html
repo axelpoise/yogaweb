@@ -22,7 +22,7 @@
 
     </div>
     <div id="select_language" class="hidden">
-        <div onclick="
+        <div id="english" onclick="
 				document.documentElement.lang = 'en';
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
@@ -30,7 +30,7 @@
                 toggleCSSClass('up_arrow', 'hidden')
 			     ">En
         </div>
-        <div onclick="
+        <div id="french" class="hidden" onclick="
 				document.documentElement.lang = 'fr';
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
