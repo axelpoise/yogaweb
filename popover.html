@@ -9,6 +9,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </div>
+        <div class="fixed right-0 top-0 text-black text-lg p-4">
+            <button onclick="document.documentElement.lang = 'en';
+    document.body.dispatchEvent(new CustomEvent('lang-change')); ">En</button>
+            <span >  |  </span>
+            <button onclick="document.documentElement.lang = 'fr';
+    document.body.dispatchEvent(new CustomEvent('lang-change'));">Fr</button>
+        </div>
         <div class="fixed top-1/2 w-full text-black px-2">
             <div class="text-4xl">
                 <t-lang en>Stay informed</t-lang>
