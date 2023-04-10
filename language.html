@@ -27,6 +27,8 @@
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
                 toggleCSSClass('down_arrow', 'hidden')
+                toggleCSSClass('french', 'hidden')
+                toggleCSSClass('english', 'hidden')
                 toggleCSSClass('up_arrow', 'hidden')
 			     ">En
         </div>
@@ -34,6 +36,8 @@
 				document.documentElement.lang = 'fr';
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
+                toggleCSSClass('french', 'hidden')
+                toggleCSSClass('english', 'hidden')
                 toggleCSSClass('down_arrow', 'hidden')
                 toggleCSSClass('up_arrow', 'hidden')
 				">Fr
