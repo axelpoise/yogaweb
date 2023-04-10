@@ -1,6 +1,9 @@
 <div class="py-10">
     <div class="flex flex-row min-w-full justify-between">
-        <div id="logo"><img src="beapreeya.svg" alt="bea preeya"/></div>
+        <button hx-get="/main.html" hx-trigger="click" hx-target="#content" onclick="
+            const menu = document.getElementById('burger');
+            menu.classList.toggle('hidden');
+            " id="logo"><img src="beapreeya.svg" alt="bea preeya"/></button>
         <button class="inline md:hidden w-10 h-10 text-gray-600 p-1 " onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');

@@ -1,5 +1,5 @@
 <div id="language" class="md:m-2 m-b-2 text-yoga-100">
-    <div id="current_language" onclick="
+    <button id="current_language" onclick="
             toggleCSSClass('select_language', 'hidden');
             toggleCSSClass('down_arrow', 'hidden')
             toggleCSSClass('up_arrow', 'hidden')
@@ -20,9 +20,9 @@
 
         </div>
 
-    </div>
+    </button>
     <div id="select_language" class="hidden">
-        <div id="english" onclick="
+        <button id="english" onclick="
 				document.documentElement.lang = 'en';
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
@@ -31,8 +31,8 @@
                 toggleCSSClass('english', 'hidden')
                 toggleCSSClass('up_arrow', 'hidden')
 			     ">En
-        </div>
-        <div id="french" class="hidden" onclick="
+        </button>
+        <button id="french" class="hidden" onclick="
 				document.documentElement.lang = 'fr';
 			    document.body.dispatchEvent(new CustomEvent('lang-change'));
                 toggleCSSClass('select_language', 'hidden');
@@ -41,6 +41,6 @@
                 toggleCSSClass('down_arrow', 'hidden')
                 toggleCSSClass('up_arrow', 'hidden')
 				">Fr
-        </div>
+        </button>
     </div>
 </div>
