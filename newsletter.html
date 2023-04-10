@@ -1,13 +1,14 @@
-<div>
-    <form name="newsletter" data-netlify="true">
+<div class="py-6 ">
+    <form name="newsletter" data-netlify="true" netlify-honeypot="message">
     <span>
-        <input type="email" placeholder="email">
+        <input class="rounded-md indent-2" type="email" placeholder="email">
+        <input name="message" class="hidden" type="text">
         <button type="submit">
             <t-lang en>
-                sign up for the newsletter
+                Sign up for the newsletter
             </t-lang>
             <t-lang fr>
-
+                S'abonner à la newsletter
             </t-lang>
         </button>
     </span>
