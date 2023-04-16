@@ -16,12 +16,12 @@
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">
-            <t-lang en>Classes</t-lang>
-            <t-lang fr>Cours</t-lang>
+            <t-lang en>Planning &amp; Reservations</t-lang>
+            <t-lang fr>Planning &amp; Résa.</t-lang>
         </button>
     </div>
     <div>
-        <button hx-get="/booking.html" hx-target="#content" hx-trigger="click" onclick="
+        <button hx-get="/comingsoon.html" hx-target="#content" hx-trigger="click" onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">
@@ -31,7 +31,7 @@
     </div>
     <div>
 
-        <button hx-get="/prices.html" hx-target="#content" hx-trigger="click" onclick="
+        <button hx-get="/prices.html" hx-target="#content"  hx-trigger="click" onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">
@@ -40,7 +40,7 @@
         </button>
     </div>
     <div>
-        <button hx-get="/booking.html" hx-target="#content" hx-trigger="click" onclick="
+        <button hx-get="/comingsoon.html" hx-target="#content" hx-trigger="click" onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">
@@ -49,7 +49,7 @@
         </button>
     </div>
     <div>
-        <button  onclick="
+        <button hx-get="/comingsoon.html" hx-target="#content" hx-trigger="click" onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">
@@ -58,7 +58,7 @@
         </button>
     </div>
     <div>
-        <button hx-get="/main.html" hx-trigger="click" hx-target="#content" onclick="
+        <button hx-get="/main.html" hx-trigger="click" hx-target="#content" hx-replace-url="/" onclick="
             const menu = document.getElementById('burger');
             menu.classList.toggle('hidden');
             ">

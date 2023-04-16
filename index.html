@@ -69,19 +69,36 @@
         }
     </script>
 
+
 </head>
 <body class="bg-yoga-50 text-yoga-100 font-light">
 <div hx-get="./popover.html" hx-trigger="load once delay:1s"></div>
 <div class="flex flex-row">
     <div class="md:basis-1/6 basis-10"></div>
     <div class="md:basis-2/3 basis-80  ">
-        <div hx-get="/header.html" hx-trigger="load">header</div>
+        <div hx-get="/header.html" hx-trigger="load" >header</div>
         <div id="content">
-            <div hx-get="/main.html" hx-trigger="load">main</div>
+            <div id="current-content" hx-get="/main.html" hx-trigger="load">main</div>
         </div>
         <div hx-get="/footer.html" hx-trigger="load">footer</div>
     </div>
     <div class="md:basis-1/6 basis-10"></div>
 </div>
+<script>
+    var page = '/main.html'
+    var url = '/'
+    switch(window.location.search){
+        case '?prices': page = '/prices.html'; url = '/prices'; break;
+        case '?planning-reservations': page = '/schedule.html'; url = '/planning-reservations'; break;
+
+
+        default: '/main.html'; url = '/'; break;
+    }
+
+    var el = document.getElementById('current-content')
+    console.log(el)
+    el.setAttribute('hx-get', page)
+
+</script>
 </body>
 </html>
