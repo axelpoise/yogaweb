@@ -11,17 +11,36 @@
         </div>
         <div class="fixed right-0 top-0 text-black text-lg p-4">
             <button onclick="document.documentElement.lang = 'en';
-    document.body.dispatchEvent(new CustomEvent('lang-change')); ">En</button>
-            <span >  |  </span>
+    document.body.dispatchEvent(new CustomEvent('lang-change')); ">En
+            </button>
+            <span>  |  </span>
             <button onclick="document.documentElement.lang = 'fr';
-    document.body.dispatchEvent(new CustomEvent('lang-change'));">Fr</button>
+    document.body.dispatchEvent(new CustomEvent('lang-change'));">Fr
+            </button>
         </div>
         <div class="fixed top-1/2 w-full text-black px-2">
             <div class="text-4xl">
-                <t-lang en>Let's keep in touch !</t-lang>
+                <t-lang en>Let's stay in touch !</t-lang>
                 <t-lang fr>Abonne-toi à ma <br>newsletter</t-lang>
             </div>
-            <div hx-get="./newsletter.html" hx-trigger="load"></div>
+            <div class="py-6 ">
+                <form name="popover" data-netlify="true" method="POST" netlify-honeypot="message">
+                    <div>
+                        <input name="email"
+                               class="rounded-md indent-2 m-2 p-1 bg-yoga-50 outline outline-1 w-44 placeholder-yoga-950 placeholder-opacity-100"
+                               type="email" placeholder="e-mail">
+                        <input name="message" class="hidden" type="text">
+                        <button class="rounded-md bg-yoga-600 p-2 " type="submit">
+                            <t-lang en>
+                               Subscribe :)
+                            </t-lang>
+                            <t-lang fr>
+                                s'abonner :)
+                            </t-lang>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
